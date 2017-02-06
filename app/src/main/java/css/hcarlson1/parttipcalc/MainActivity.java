@@ -12,6 +12,7 @@ public class MainActivity extends AppCompatActivity {
     EditText numParty;
     TextView totalTip;
     TextView totalPP;
+    TipCalculator tipCalc;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

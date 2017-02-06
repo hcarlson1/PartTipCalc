@@ -12,7 +12,7 @@ public class MainActivity extends AppCompatActivity {
     EditText numParty;
     TextView totalTip;
     TextView totalPP;
-    TipCalculator tipCalc;
+    IntfTipCalculator tipCalc;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,12 +28,11 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void OnClickCalcButton(View view) {
-
         Double bill = Double.parseDouble(billAmount.getText().toString());
         Integer people = Integer.parseInt(numParty.getText().toString());
 
-        totalTip.setText("Total tip: " + tipCalc.CalcTotalTip(bill));
-        totalPP.setText("Tip per person: " + tipCalc.CalcTipPerPerson(bill,people));
+        totalTip.setText("Total tip: " + tipCalc.CalcTotalTip(bill).toString());
+        totalPP.setText("Tip per person: " + tipCalc.CalcTipPerPerson(bill,people).toString());
 
     }
 }

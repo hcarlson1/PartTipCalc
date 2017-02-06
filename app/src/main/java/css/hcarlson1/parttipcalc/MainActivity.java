@@ -31,14 +31,9 @@ public class MainActivity extends AppCompatActivity {
 
         Double bill = Double.parseDouble(billAmount.getText().toString());
         Integer people = Integer.parseInt(numParty.getText().toString());
-        Double result = 0.0;
-        Double resultPP = 0.0;
 
-        result = bill * .1;
-        resultPP = result / people;
-
-        totalTip.setText("Total tip: " + result);
-        totalPP.setText("Tip per person: " + resultPP);
+        totalTip.setText("Total tip: " + tipCalc.CalcTotalTip(bill));
+        totalPP.setText("Tip per person: " + tipCalc.CalcTipPerPerson(bill,people));
 
     }
 }
